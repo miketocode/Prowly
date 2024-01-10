@@ -1,0 +1,42 @@
+# language: en
+Feature: Using Copilot to Extend Search
+Scenario: Checking what additional information can be gathered and how Copilot's SUGGESTIONS additional feature will help expand the response
+
+  Given I am on the page bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx
+  When I enter the phrase "MEDIA MONITORING by Prowly" in the search field
+  And I initiate the generation of a response by clicking ENTER
+  And The response is generated
+  And I use Copilot SUGGESTIONS feature to extend the obtained information
+  Then Copilot should provide meaningful and more detailed suggestions, assisting in precisely formulating a query regarding media monitoring by Prowly.
+  And The response is delivered
+
+# language: en
+Feature: Copilot for Gathering Information on Media Monitoring Module in Prowly
+Scenario: Checking what information I can gather using Copilot by asking a question in the full sentence
+
+  Given I am on the page bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx
+  When I enter the phrase "What information do you have about MEDIA MONITORING by Prowly?" in the Ask me a question field
+  And I initiate the generation of a response
+  Then The response results are loaded, and I check if the search results are related to the media monitoring features by Prowly.
+  And the search engine should return results containing information about the media monitoring features in Prowly
+
+# language: en
+Feature: Analysis of the Effectiveness of the Copilot algorithm
+Scenario: Checking if Copilot generates meaningful and helpful suggestions for expanding the query
+
+  Given I am on the page bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx
+  When I enter the phrase "What is MEDIA MONITORING by Prowly?" in the Ask me a question field
+  And I initiate the generation of a response
+  Then The response results are loaded, and I compare the generated response with the search results obtained without using AI, i.e., using the bing.com search engine
+  And Copilot should provide suggestions that enrich the query and result in more accurate outcomes
+
+# language: en
+Feature: Listing the Key Features of MEDIA MONITORING by Prowly
+Scenario: Checking if Copilot generates a list of the 10 most important things about MEDIA MONITORING
+
+  Given I am on the page bing.com/search?q=Bing+AI&showconv=1&FORM=hpcodx
+  When I enter the phrase "Can you list 10 most important things about MEDIA MONITORING by Prowly?" in the Ask me a question field
+  And I initiate the generation of a response
+  Then the response results in the form of a list of 10 points are generated
+  And Copilot provides a list of relevant results
+
