@@ -1,0 +1,82 @@
+Syntax: Gherkin
+OS: Windows 11
+Browser: Chrome
+Search engine: Bing.com
+
+# language: en
+Feature: Basic Search using bing.com
+Scenario: Checking if the search phrase "Prowly Media Monitoring" is being searched
+
+  Given I am on the page bing.com
+  When I enter the phrase "Prowly Media Monitoring" in the search field
+  And I press ENTER on the keyboard
+  Then The search results are loaded
+  And the results for the searched phrase are visible
+
+# language: en
+Feature: Basic Search using bing.com - Voice Search feature
+Scenario: Checking if the search phrase "Prowly Media Monitoring" can be entered using the Voice Search feature
+
+  Given I am on the page bing.com
+  When I click on the microphone icon in the search field
+  But I need to allow the device to use the microphone
+  And I press ENTER on the keyboard
+  Then The search results are loaded
+  And the results for the searched phrase are visible
+
+# language: en
+Feature: Basic Search using bing.com - Pagination
+Scenario: Review multiple pages of search results.
+
+  Given I am on the page bing.com
+  When I enter the phrase "Prowly Media Monitoring" in the search field
+  And I press ENTER on the keyboard
+  Then The search results are loaded
+  But The results must be visible on several consecutive pages due to their quantity
+  And Bing should provide a functional pagination system, allowing users to navigate through multiple result pages.
+
+# language: en
+Feature: Functionality - Search Operators for Narrowing Results
+Scenario: Enter a phrase enclosed in double quotes (e.g., "exact phrase").
+
+  Given I am on the page bing.com
+  When I enter the phrase "Prowly Media Monitoring" in the search field - the phrase is enclosed in double quotes
+  And I press ENTER on the keyboard
+  Then The search results are loaded
+  And The search results should only include the exact phrase within the double quotes
+
+# language: en
+Feature: Search Category Functionality
+Scenario: Check if the link title, URL, and description have highlighted keywords in the response
+
+  Given I am on the page bing.com
+  When I enter the phrase "Prowly Media Monitoring" in the search field
+  And I press ENTER on the keyboard
+  Then Search results are loaded
+  And Search results should have individual words used in the search phrase highlighted/bolded in the link title, URL, and description
+
+# language: en
+Feature: Search Category Functionality
+Scenario: Check if the user can search across different categories - images, videos, news, shopping, and the response should correspond to the keyword only in that category
+
+  Given I am on the page bing.com
+  When I enter the phrase "Prowly Media Monitoring" in the search field
+  And I press ENTER on the keyboard
+  Then The search results are loaded
+  And Search results are loaded in the SEARCH category
+  And Search results are loaded in the VIDEO category
+  And Search results are loaded in the NEWS category
+  And Search results are loaded in the SHOPPING category
+
+# language: en
+Feature: Functionality - Related Searches
+Scenario: Check if related search terms are displayed for keywords to facilitate user search
+
+  Given I am on the page bing.com
+  When I enter the phrase "Prowly Media Monitoring" in the search field
+  And I press ENTER on the keyboard
+  Then The search results are loaded
+  And At the top of the first search page, on the right side of the first result, a module with the class="richrswrapper" for Related Searches is visible
+  And Upon scrolling down, the module with the class "richrswrapper" for Related Searches is changed to a sidebar module with the class="lgw-slide-in"
+
+

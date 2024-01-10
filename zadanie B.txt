@@ -1,3 +1,8 @@
+Syntax: Gherkin
+OS: Windows 11
+Browser: Chrome
+Search engine: Bing.com and Copilot
+
 # language: en
 Feature: Using Copilot to Extend Search
 Scenario: Checking what additional information can be gathered and how Copilot's SUGGESTIONS additional feature will help expand the response
