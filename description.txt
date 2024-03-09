@@ -1,12 +1,2 @@
-Cześć,
-przede wszystkim dzięki, że mogłem wykonać dla Ciebie to zadanie. Mimo, że nie mam doświadczenia komercyjnego ze składnia Gherkina to słyszałem o niej i fajnie, że mogłem się czegoś nauczyć - ale do rzeczy :)
-
-Przygotowywując się do wykonania zadania wyraźnie rozróżniłem czym są dla mnie scenariusze testowe, a czym przypadki testowe. W moim podejściu do rozwiązania skupiłem się tylko i wyłącznie na rozpisaniu scenariuszami testowymi jak najwięcej funkcjonalności wyszukiwarki.
-Scenariusze testowe są dla mnie zbiorem przypadków testowych z jednej kategorii. Idąc tym tropem Przypadki testowe obejmują bardziej szczegółowy aspekt kodu. 
-Aby zachować jak największą czytelność scenariuszy skupiłem się na pozytywnych wynikach. 
-Do commitowania na GitHuba wykorzystałem konsolę Git Bash.
-Co ważne skupiłem się na testach samej frazy i nie testowałem takich funkcjonalności jak: responsywności, wyświetlania wyników na różnych urządzeniach i systemach operacyjnych, czy też środowiskach (Safari, Firefox, Edge).
-Oczywiście, przygotowane przeze mnie scenariusze nie wyczerpują wszystkich możliwości testów a są jedynie przykładami podejścia do testów.
-
-Pozdrawiam,
-Michał
+Example use of gherkin syntax.
+The repository shows my learning of this syntax.
